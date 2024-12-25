@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Image Puzzle Game</h1>
+        <div id="controls" class="text-center mt-3">
+            <input type="file" id="image-upload" accept="image/*" class="form-control-file">
+            <button id="upload-btn" class="btn btn-secondary mt-2">Upload Image</button>
+            <button id="scramble-btn" class="btn btn-primary" disabled>Scramble</button>
+            <div id="timer" class="mt-2">Time: <span id="time">300</span> seconds</div>
+            <div id="move-counter">Moves: <span id="moves">0</span></div>
+        </div>
+        <div id="game-container">
+            <div id="game-board"></div>
+            <img id="reference-image" src="" alt="Reference Image">
+        </div>
+        <div id="victory-message" class="alert alert-success text-center mt-3" style="display: none;"></div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

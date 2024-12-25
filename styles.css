@@ -1,0 +1,53 @@
+body{
+    background-image: url(./top-view-white-puzzle-pieces-brown-background_23-2149299091.jpg);
+}
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+#game-board {
+    width: 400px; /* Adjust based on the number of tiles */
+    height: 400px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
+}
+.tile {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    background-size: 400px 400px; /* Size of the original image */
+    transition: background-position 0.3s ease; /* Animation for tile movement */
+}
+.highlight {
+    border: 2px solid red; /* Highlighted border */
+}
+#reference-image {
+    margin-left: 20px;
+    width: 400px; /* Same width as the game board */
+    height: 400px; /* Same height as the game board */
+    border: 1px solid #ccc;
+    display: none; /* Initially hidden */
+}
+#image-upload{
+    background-color: rgb(199, 237, 237);
+    width: 60%;
+
+}
+
+#timer{
+    font-weight: bold;
+}
+#move-counter{
+    font-weight: bold;
+}
