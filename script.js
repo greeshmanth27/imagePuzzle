@@ -9,11 +9,12 @@ let imageUrl = ''; // To store the uploaded image URL
 let selectedTiles = []; // To keep track of selected tiles
 let timerStarted = false; // To track if the timer has started
 
+// The provided initGame function initializes a game setup by creating an array of tiles and then rendering them
 function initGame() {
     tiles = Array.from({ length: totalTiles }, (_, i) => i);
     renderTiles();
 }
-
+// The renderTiles function dynamically updates and displays a game board using the current state of tiles and associated data.
 function renderTiles() {
     const gameBoard = document.getElementById('game-board');
     gameBoard.innerHTML = '';
@@ -70,7 +71,7 @@ function swapTiles(index1, index2, tile1, tile2) {
 
 function checkVictory() {
     if (tiles.every((tile, index) => tile === index)) {
-        document.getElementById('victory-message').innerText = 'Congratulations! You solved the puzzle!';
+        document.getElementById('victory-message').innerText = 'Congratulations! Gelichesam ra bulloda...!';
         document.getElementById('victory-message').style.display = 'block';
         clearInterval(timer); // Stop the timer
     }
